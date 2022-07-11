@@ -6,7 +6,7 @@ pub fn with_prefix(pfx: &str) -> String {
     format!("{}-{}-{}", pfx, timestamp(6), random_manager::string(6))
 }
 
-/// RUST_LOG=debug cargo test --all-features --package avalanche-utils --lib -- time::test_with_prefix --exact --show-output
+/// RUST_LOG=debug cargo test --all-features --package id-manager --lib -- time::test_with_prefix --exact --show-output
 #[test]
 fn test_with_prefix() {
     use log::info;
@@ -42,7 +42,7 @@ pub fn timestamp(n: usize) -> String {
     d
 }
 
-/// RUST_LOG=debug cargo test --all-features --package avalanche-utils --lib -- time::test_timestamp --exact --show-output
+/// RUST_LOG=debug cargo test --all-features --package id-manager --lib -- time::test_timestamp --exact --show-output
 #[test]
 fn test_timestamp() {
     use log::info;

@@ -22,7 +22,7 @@ pub fn string(n: usize) -> String {
     id.to_lowercase()
 }
 
-/// RUST_LOG=debug cargo test --all-features --package avalanche-utils --lib -- system_id::test_string --exact --show-output
+/// RUST_LOG=debug cargo test --all-features --package id-manager --lib -- system::test_string --exact --show-output
 #[test]
 fn test_string() {
     let _ = env_logger::builder().is_test(true).try_init();
