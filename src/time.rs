@@ -3,7 +3,12 @@ use chrono::prelude::*;
 /// Generates a random ID with the prefix followed by a
 /// timestamp and random characters.
 pub fn with_prefix(pfx: &str) -> String {
-    format!("{}-{}-{}", pfx, timestamp(6), random_manager::string(6))
+    format!(
+        "{}-{}-{}",
+        pfx,
+        timestamp(6),
+        random_manager::secure_string(6)
+    )
 }
 
 /// RUST_LOG=debug cargo test --all-features --package id-manager --lib -- time::test_with_prefix --exact --show-output
